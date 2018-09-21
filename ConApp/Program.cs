@@ -12,17 +12,27 @@ namespace ConApp
         {
             // 1
             int max = 0;
+            int min = 0;
+
             List<int> lista = new List<int>();
             Console.WriteLine("Adjon meg a db számot!");
             int db = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < db; i++)
             {
-                Console.WriteLine("Adja meg a(z)" + (i+1) +  ".-edik számot");
+                Console.WriteLine("Adja meg a(z)" + (i+1) +  ".-dik számot");
                 lista.Add(Convert.ToInt32(Console.ReadLine()));
             }
             for (int i = 0; i < lista.Count; i++)
             {
-               
+                if (i==0)
+                {
+                    min = lista[0];
+                    max = lista[0];
+                }
+                if (lista[i]<min)
+                {
+                    min = lista[i];
+                }
                 if (lista[i] > max)
                 {
                     max = lista[i];
@@ -30,7 +40,7 @@ namespace ConApp
                 Console.Write(lista[i] + " ");
             }
             Console.WriteLine("\nA legnagyobb szám: {0}",max);
-
+            Console.WriteLine("A legkisebb szám: {0}",min);
 
 
 
