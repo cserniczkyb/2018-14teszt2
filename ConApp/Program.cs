@@ -13,8 +13,9 @@ namespace ConApp
             // 1
             int max = 0;
             List<int> lista = new List<int>();
-            Console.WriteLine("Adjon meg 10 számot!");
-            for (int i = 0; i < 10; i++)
+            Console.WriteLine("Adjon meg a db számot!");
+            int db = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < db; i++)
             {
                 Console.WriteLine("Adja meg a(z)" + (i+1) +  ".-edik számot");
                 lista.Add(Convert.ToInt32(Console.ReadLine()));
@@ -30,8 +31,6 @@ namespace ConApp
             }
             Console.WriteLine("\nA legnagyobb szám: {0}",max);
 
-
-            //2
 
 
 
