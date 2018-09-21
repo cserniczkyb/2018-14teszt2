@@ -10,17 +10,27 @@ namespace ConApp
     {
         static void Main(string[] args)
         {
-            // 1
             int max = 0;
             int min = 0;
 
             List<int> lista = new List<int>();
             Console.WriteLine("Adjon meg a db számot!");
-            int db = Convert.ToInt32(Console.ReadLine());
+            int db;
+            if (!int.TryParse(Console.ReadLine(), out db))
+            {
+                Console.WriteLine("Hiba. nem számot adtál meg");
+                return;
+            }
             for (int i = 0; i < db; i++)
             {
-                Console.WriteLine("Adja meg a(z)" + (i+1) +  ".-dik számot");
-                lista.Add(Convert.ToInt32(Console.ReadLine()));
+                Console.WriteLine("Adja meg a(z)" + (i + 1) + ".-dik számot");
+                int szam;
+                if (!int.TryParse(Console.ReadLine(), out szam))
+                {
+                    Console.WriteLine("Hiba. nem számot adtál meg");
+                    return;
+                }
+                lista.Add(szam);
             }
             for (int i = 0; i < lista.Count; i++)
             {
