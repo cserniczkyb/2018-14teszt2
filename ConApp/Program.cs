@@ -19,6 +19,7 @@ namespace ConApp
             if (!int.TryParse(Console.ReadLine(), out db))
             {
                 Console.WriteLine("Hiba. nem számot adtál meg");
+                Console.ReadLine();
                 return;
             }
             for (int i = 0; i < db; i++)
@@ -28,6 +29,7 @@ namespace ConApp
                 if (!int.TryParse(Console.ReadLine(), out szam))
                 {
                     Console.WriteLine("Hiba. nem számot adtál meg");
+                    Console.ReadLine();
                     return;
                 }
                 lista.Add(szam);
